@@ -7,7 +7,9 @@ namespace TheGreenHunter_SV21341.Cards
     {
         public override bool OnChooseCard(BattleUnitModel owner)
         {
-            return owner.GetActiveBuff<BattleUnitBuf_Bullet_SV21341>()?.TempStack > 1;
+            return owner.GetActiveBuff<BattleUnitBuf_Bullet_SV21341>()?.TempStack > 1 &&
+                   !owner.cardSlotDetail.cardAry.Exists(x =>
+                       x?.card?.GetID().packageId == GreenModParameters.PackageId && x.card?.GetID().id == 1);
         }
 
         public override void OnApplyCard()
