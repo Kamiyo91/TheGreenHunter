@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0154DFB6-BCD5-4F08-B434-11B9A721429A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TheGreenHunter_SV21341</RootNamespace>
+    <AssemblyName>TheGreenHunter_SV21341</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="1BigDLL4221">
+      <HintPath>..\..\DLL\bin\Release\1BigDLL4221.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\DLL\bin\Release\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="CustomMapUtility">
+      <HintPath>..\..\CommonDLL\CustomMapUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\..\CommonDLL\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Utils">
+      <HintPath>..\..\CommonDLL\MonoMod.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>..\..\Tower\bin\Release\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\DLL\bin\Release\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>..\..\Tower\bin\Release\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\BehaviourAction_GreenHunterFire_SV21341.cs" />
+    <Compile Include="Buffs\BattleUnitBuf_Bullet_SV21341.cs" />
+    <Compile Include="Buffs\BattleUnitBuf_GreenLeaf_SV21341.cs" />
+    <Compile Include="Buffs\BattleUnitBuf_Poison_SV21341.cs" />
+    <Compile Include="Cards\DiceCardSelfAbility_FluoriteRain_SV21341.cs" />
+    <Compile Include="Cards\DiceCardSelfAbility_GreenHunterMassAttack_SV21341.cs" />
+    <Compile Include="Cards\DiceCardSelfAbility_PoisonedBlade_SV21341.cs" />
+    <Compile Include="Cards\DiceCardSelfAbility_Reload_SV21341.cs" />
+    <Compile Include="Cards\DiceCardSelfAbility_Shoot_SV21341.cs" />
+    <Compile Include="Cards\DiceCardSelfAbility_Willpower_SV21341.cs" />
+    <Compile Include="EnemyTeamStageManager_TheGreenHunter_SV21341.cs" />
+    <Compile Include="GreenModParameters.cs" />
+    <Compile Include="Maps\GreenHunter_SV21341MapManager.cs" />
+    <Compile Include="NpcMechUtil_GreenHunter.cs" />
+    <Compile Include="Passives\PassiveAbility_GreenHunterNpc_SV21341.cs" />
+    <Compile Include="Passives\PassiveAbility_GreenHunter_SV21341.cs" />
+    <Compile Include="Passives\PassiveAbility_HunterReflex_SV21341.cs" />
+    <Compile Include="Passives\PassiveAbility_PoisonedBlade_SV21341.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GreenHunterInit.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
