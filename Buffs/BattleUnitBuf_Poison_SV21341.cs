@@ -11,17 +11,19 @@ namespace TheGreenHunter_SV21341.Buffs
         protected override string keywordId => "GreenPoison_SV21341";
         protected override string keywordIconId => "GreenPoison_SV21341";
         public override int MaxStack => 10;
+        public override int AdderStackEachScene => -1;
+        public override bool DestroyedAt0Stack => true;
 
         public override void BeforeRollDice(BattleDiceBehavior behavior)
         {
             _owner.TakeDamage(1);
-            if (stack < 1) _owner.bufListDetail.RemoveBuf(this);
+            OnAddBuf(-1);
         }
 
         public override void OnRoundEndTheLast()
         {
             _owner.TakeDamage(stack);
-            _owner.bufListDetail.RemoveBuf(this);
+            OnAddBuf(-(stack /= 2));
         }
     }
 }

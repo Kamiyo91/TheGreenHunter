@@ -81,7 +81,7 @@ namespace TheGreenHunter_SV21341
         {
             ModParameters.CustomBookSkinsOptions.Add(GreenModParameters.PackageId, new List<CustomBookSkinsOption>
             {
-                new CustomBookSkinsOption("TheGreenHunterHeadless_SV21341", 10000001, characterNameId: 1)
+                new CustomBookSkinsOption("TheGreenHunter_SV21341", 10000001, characterNameId: 1)
             });
         }
 
